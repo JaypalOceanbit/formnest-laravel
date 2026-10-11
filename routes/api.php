@@ -17,18 +17,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/**
+ * Authentication Routes (Public)
+ */
+Route::post(EndPoints::user_register, ControllerPaths::UserController . ControllerMethods::register)->name('user.register');
+Route::post('/register', ControllerPaths::UserController . ControllerMethods::register);
 
+Route::post(EndPoints::user_login, ControllerPaths::UserController . ControllerMethods::login)->name('user.login');
+Route::post('/login', ControllerPaths::UserController . ControllerMethods::login);
 
 /**
- *
- *  unauthorised:api = Here "auth" is middleware define
- *                     in 'Kernel.php' with Class 'Authenticate.php'
+ *  Authenticated Routes
  */
 Route::group(["middleware" => "auth:api"], function () {
-
+    Route::get(EndPoints::user_profile, ControllerPaths::UserController . ControllerMethods::profile)->name('user.profile');
+    Route::get(EndPoints::user_detail, ControllerPaths::UserController . ControllerMethods::profile)->name('user.detail');
+    Route::get('/profile', ControllerPaths::UserController . ControllerMethods::profile);
+    Route::post(EndPoints::user_logout, ControllerPaths::UserController . ControllerMethods::logout)->name('user.logout');
+    Route::post('/logout', ControllerPaths::UserController . ControllerMethods::logout);
 });
 
 /**
