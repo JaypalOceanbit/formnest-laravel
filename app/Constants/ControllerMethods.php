@@ -33,4 +33,6 @@ class ControllerMethods
     const delete = '@delete';
     const list = '@list';
     const detail = '@detail';
+    const changeStatus = '@changeStatus';
+    const duplicate = '@duplicate';
 }

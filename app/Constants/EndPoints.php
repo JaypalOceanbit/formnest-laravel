@@ -38,4 +38,41 @@ class EndPoints
     const password_reset = 'password/reset';
     const password_update = 'password/update';
 
+    /**
+     * ========================================================================
+     * Master Field Types Services
+     * ========================================================================
+     */
+    const master_field_type_list = '/master-field-type/list';
+    const master_field_type_add = '/master-field-type/add';
+    const master_field_type_detail = '/master-field-type/detail';
+    const master_field_type_update = '/master-field-type/update';
+    const master_field_type_delete = '/master-field-type/delete';
+    const master_field_type_change_status = '/master-field-type/change-status';
+
+    /**
+     * ========================================================================
+     * Master Template Categories Services
+     * ========================================================================
+     */
+    const master_template_category_list = '/master-template-category/list';
+    const master_template_category_add = '/master-template-category/add';
+    const master_template_category_detail = '/master-template-category/detail';
+    const master_template_category_update = '/master-template-category/update';
+    const master_template_category_delete = '/master-template-category/delete';
+    const master_template_category_change_status = '/master-template-category/change-status';
+
+    /**
+     * ========================================================================
+     * Master Templates Services
+     * ========================================================================
+     */
+    const master_template_list = '/master-template/list';
+    const master_template_add = '/master-template/add';
+    const master_template_detail = '/master-template/detail';
+    const master_template_update = '/master-template/update';
+    const master_template_delete = '/master-template/delete';
+    const master_template_duplicate = '/master-template/duplicate';
+    const master_template_change_status = '/master-template/change-status';
+
 }

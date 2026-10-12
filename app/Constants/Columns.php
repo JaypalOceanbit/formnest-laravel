@@ -54,4 +54,17 @@ class Columns
     const token = 'token';
 
 
+    /**
+     * Master Tables Columns
+     */
+    const type_key = 'type_key';
+    const category = 'category';
+    const slug = 'slug';
+    const description = 'description';
+    const icon = 'icon';
+    const default_config = 'default_config';
+    const sort_order = 'sort_order';
+    const json = 'json';
+    const preview_image = 'preview_image';
+    const is_featured = 'is_featured';
 }

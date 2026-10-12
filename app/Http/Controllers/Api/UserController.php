@@ -177,7 +177,6 @@ class UserController extends BaseController
         }
 
         $this->setSuccessMessage('User profile retrieved successfully.');
-        $this->addSuccessResultKeyValue(Keys::USER, $user);
         $this->addSuccessResultKeyValue(Keys::DATA, $user);
 
         return $this->sendSuccessResult();
